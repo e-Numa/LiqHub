@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="/css/user_form.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+<body>
+
+<div class="container">
+  <input type="checkbox" id="flip">
+  <div class="cover">
+    <div class="front">
+      <img src="images/bacco-family-of-wines.jpg" alt="">
+      <div class="text">
+        <span class="text-1">"Wine: <br> life's finest vintage."</span>
+
+      </div>
+    </div>
+    <div class="back">
+      <img class="backImg" src="images/grapes.jpeg" alt="">
+      <div class="text">
+
+        <span class="text-1">"LiqHub: <br> your luxury collection."</span>
+
+      </div>
+    </div>
+  </div>
+  <div class="forms">
+    <div class="form-content">
+      <div class="login-form">
+        <div class="title">Login</div>
+
+        <form action="/login" method="post"  th:object="${loginRequest}">
+
+
+          <div class="input-boxes">
+            <div class="input-box">
+              <i class="fas fa-envelope"></i>
+              <input type="text" name="name" placeholder="Enter your username" required>
+            </div>
+            <div class="input-box">
+              <i class="fas fa-lock"></i>
+              <input type="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <div class="text"><a href="#">Forgot password?</a></div>
+            <div class="button input-box">
+
+              <input type="submit" value="Login">
+            </div>
+            <div class="text sign-up-text">Don't have an account? <label for="flip">Signup now</label></div>
+          </div>
+        </form>
+
+        <form action="/admin" method="get">
+          <button type="submit">Admin Login</button>
+        </form>
+
+      </div>
+      <div class="signup-form">
+        <div class="title">Signup</div>
+
+        <form method="post" action="/register" th:object="${registerRequest}">
+
+
+          <div class="input-boxes">
+            <div class="input-box">
+              <i class="fas fa-user"></i>
+              <input type="text" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="input-box">
+              <i class="fas fa-envelope"></i>
+              <input type="text" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="input-box">
+              <i class="fas fa-lock"></i>
+              <input type="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <div class="button input-box">
+              <%--                            <input type="hidden" name="action" value="Gsignup">--%>
+              <input type="submit" value="Signup">
+            </div>
+            <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+</html>

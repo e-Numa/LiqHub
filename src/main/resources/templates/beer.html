@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Beer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/css/beer.css">
+</head>
+
+<header>
+    <div class="secondHeader">
+        <div>
+            <h1 class="new">
+                <a href="/">liqHub</a>
+            </h1>
+        </div>
+
+        <div>
+            <h2 id="shopBasket"><button id="cart-btn" class="fas fa-shopping-cart" onclick="openCartDialog()"><span
+                    id="cart-counter">0</span></button></h2>
+        </div>
+    </div>
+</header>
+
+<section class="product" id="product">
+    <h1 class="heading">our <span>beer collection</span></h1>
+    <div class="boxContain">
+        <div class="box">
+            <div class="image-container">
+                <img src="images/beerCategory/budwiser.webp" alt="">
+                <div class="overlay">
+                    <p>price</p>
+                    <h1>&#8358 1000</h1>
+                </div>
+            </div>
+            <h3>budweiser</h3>
+            <button class="add-to-cart-btn" data-index="0">Add to Cart</button>
+        </div>
+
+        <div class="box">
+            <div class="image-container">
+                <img src="images/beerCategory/33.jpeg" alt="">
+                <div class="overlay">
+                    <p>price</p>
+                    <h1>&#8358 800</h1>
+                </div>
+            </div>
+            <h3>33 larger</h3>
+            <button class="add-to-cart-btn" data-index="1">Add to Cart</button>
+        </div>
+
+        <div class="box">
+            <div class="image-container">
+                <img src="images/beerCategory/canada.jpeg" alt="">
+                <div class="overlay">
+                    <p>price</p>
+                    <h1>&#8358 1500</h1>
+                </div>
+            </div>
+            <h3>canada dry</h3>
+            <button class="add-to-cart-btn" data-index="2">Add to Cart</button>
+        </div>
+
+        <div class="box">
+            <div class="image-container">
+                <img src="images/beerCategory/goldberg.jpeg" alt="">
+                <div class="overlay">
+                    <p>price</p>
+                    <h1>&#8358 1000</h1>
+                </div>
+            </div>
+            <h3>goldberg</h3>
+            <button class="add-to-cart-btn" data-index="3">Add to Cart</button>
+        </div>
+
+        <div class="box">
+            <div class="image-container">
+                <img src="images/beerCategory/guinness.png" alt="">
+                <div class="overlay">
+                    <p>price</p>
+                    <h1>&#8358 1000</h1>
+                </div>
+            </div>
+            <h3>guinness stout</h3>
+            <button class="add-to-cart-btn" data-index="4">Add to Cart</button>
+        </div>
+
+        <div class="box">
+            <div class="image-container">
+                <img src="images/beerCategory/gulder.jpeg" alt="">
+                <div class="overlay">
+                    <p>price</p>
+                    <h1>&#8358 800</h1>
+                </div>
+            </div>
+            <h3>gulder</h3>
+            <button class="add-to-cart-btn" data-index="5">Add to Cart</button>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Cart Dialog -->
+<div id="cartModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeCartDialog()">&times;</span>
+        <h2>Cart</h2>
+        <div id="cart-items">
+            <p>Your cart is empty.</p>
+        </div>
+
+
+        <!-- User Information Form -->
+        <form id="user-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" required>
+            </div>
+            <p class="total-amount">Total Amount to be Paid</p>
+            <span id="total-amount">$0</span>
+        </form>
+
+        <!-- Buttons -->
+        <button onclick="closeCartDialog()" class="btn2">Continue Shopping</button>
+        <button onclick="checkout()" class="btn2">Checkout</button>
+    </div>
+</div>
+
+<section class="footer">
+
+    <div>
+        <p class="credit">powered by | <span class="idea"> ideaEngines </span> </p>
+    </div>
+</section>
+<script src="js/beer.js"></script>
+</body>
+
+</html>

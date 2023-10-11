@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>View Product</title>
+    <link rel="stylesheet" href="/css/deleteProduct.css">
+    <link rel="stylesheet" href="/css/adminDashboard.css">
+
+</head>
+<body>
+
+<div class="sidebar">
+    <h1>Admin Panel</h1>
+    <ul>
+        <li><a href="/dashboard">Dashboard</a></li>
+        <li><a href="/showUsers">Users</a></li>
+        <li><a href="/products">View Products</a></li>
+        <li><a href="/add">Add Products</a></li>
+        <li><a href="/deleteProducts">Delete Products</a></li>
+    </ul>
+</div>
+<div class="content">
+    <header>
+        <h2><u>LiqHub</u></h2>
+        <button id="logoutButton">Logout</button>
+    </header>
+    <main>
+
+
+        <h1>Delete Product</h1>
+
+        <form action="/deleteProducts" method="get">
+            <table>
+                <thead>
+                <tr>
+                    <th>Product ID</th>
+                    <th>Product Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Delete</th>
+
+                </tr>
+                </thead>
+                <tbody>
+
+                <tr th:each="product : ${productsRequestDelete}">
+                    <td th:text="${product.product_id}"></td>
+                    <td th:text="${product.name}"></td>
+                    <td th:text="${product.price}"></td>
+                    <td th:text="${product.quantity}"></td>
+                    <td>
+
+                        <form th:action="@{'/products/' + ${product.product_id}}" method="post">
+                            <input type="hidden" name="_method" value="DELETE"/>
+                            <button type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+        </form>
+
+
+    </main>
+</div>
+<script src="/js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root {
+    --orange: #800000;
+    --black: #2c2c54;
+}
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+*::selection {
+    background: var(--orange);
+    color: #fff;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+#cart-counter{
+    margin-left: 2rem;
+}
+
+.secondHeader {
+    background: #ffffff;
+    padding: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative
+}
+
+.fa-bars {
+    font-size: 2.5rem;
+    border: 0.1rem #ffffff;
+    border-radius: 0.5rem;
+    padding: .64rem 1.2rem;
+}
+
+.fa-window-close {
+    font-size: 4rem;
+    display: none;
+}
+
+.navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--black);
+    padding: 1rem 2rem;
+    display: none;
+}
+
+.navbar a {
+    background-color: #ffffff;
+    margin: .5rem;
+    text-align: center;
+}
+
+.shownav {
+    display: flex;
+    flex-direction: column;
+    background: var(--black);
+}
+
+.secondHeader .navbar a {
+    font-size: 2rem;
+    color: var(--black);
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+
+}
+
+.secondHeader .navbar a:hover {
+    color: rgb(255, 255, 255);
+    background-color: var(--orange);
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+}
+
+.homeImg img {
+    width: 100%;
+}
+
+.home .homeImg {
+    flex: 1 1 40rem;
+    padding-top: 5rem;
+}
+
+.home .content {
+    text-align: center;
+}
+
+.home .content {
+    flex: 1 1 40rem;
+}
+
+.home .content h3 {
+    font-size:6rem;
+    color: var(--orange);
+    text-transform: uppercase;
+    text-align: left;
+    margin-left: 15rem;
+}
+
+.home .content span {
+    font-size: 3rem;
+    color: #666;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    background: var(--orange);
+    color: #fff;
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.btn2 {
+    display: inline-block;
+    margin: 1rem;
+    background: var(--orange);
+    color: #fff;
+    padding: .8rem 3rem;
+    font-size: 1.2rem;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+.add-to-cart-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    background: var(--orange);
+    color: #fff;
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+#shopBtn {
+    display: inline-block;
+    margin-top: 1rem;
+    background: var(--orange);
+    color: #fff;
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    background-color: var(--black);
+    text-decoration: none;
+    color: #fff;
+}
+
+.add-to-cart-btn:hover {
+    background-color: var(--black);
+    text-decoration: none;
+    color: #fff;
+}
+
+#shopBtn:hover {
+    background-color: var(--black);
+    text-decoration: none;
+    color: #fff;
+}
+
+.btn2:hover {
+    background-color: var(--black);
+    text-decoration: none;
+    color: #fff;
+}
+
+.logo {
+    display: inline-block;
+    margin-top: 1rem;
+    background: var(--orange);
+    color: #fff;
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+#shopBasket {
+    display: inline-block;
+    margin-top: 1rem;
+    background: var(--orange);
+    border-radius: 20px;
+    padding: .4rem 1.5rem;
+    font-size: 1.7rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.fa-shopping-cart {
+    color: #fff;
+    background-color: var(--orange);
+    font-size: 1.7rem;
+}
+
+.description .boxCon {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+}
+
+.description .boxCon .box {
+    border: .1rem solid #2C2C54FF;
+    text-align: center;
+    padding: 5rem 25rem;
+    flex: 1 1 25rem;
+    background-color: #2C2C54FF;
+
+}
+
+.description .boxCon .box h3 {
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.heading {
+    text-align: center;
+    color: var(--black);
+    text-transform: uppercase;
+    padding: 1rem;
+    font-size: 3.5rem;
+    padding-bottom: 2rem;
+}
+
+.heading span {
+    color: var(--orange);
+    text-transform: uppercase;
+}
+
+.product .boxContain {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.product .boxContain .box {
+    flex: 1 1 40rem;
+    text-align: center;
+    padding: 2rem;
+    border-radius: .5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.product .boxContain .box h3 {
+    color: var(--black);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.product .boxContain .box img {
+    width: 25rem;
+    height: 27rem;
+}
+
+.footer .boxCon .logo {
+    display: inline-block;
+    margin-top: 1rem;
+    background: var(--orange);
+    color: #2C2C54FF;
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.footer .boxCon {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    flex: 1 1 25rem;
+    background-color: #2C2C54FF;
+    justify-content: space-around;
+}
+
+.footer .boxCon h3 {
+    font-size: 1.3rem;
+    color: #fff;
+    padding: .7rem 0;
+}
+
+.footer .credit {
+    padding: 2.5rem 1rem;
+    border-top: .1rem solid #2C2C54FF;
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+section {
+    padding: 2rem;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #2C2C54FF;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2C2C54FF;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.overlay p, h1 {
+    color: #fff;
+    font-size: 3rem;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+.min, .max{
+    display: inline-block;
+    margin-top: 1rem;
+    background: var(--orange);
+    color: #fff;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.total-amount {
+    color: var(--black);
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+#total-amount {
+    display: block;
+    color: var(--black);
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+
+@media (min-width: 768px) {
+
+    .firstHeader {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .fa-bars {
+        display: none;
+    }
+
+    .navbar {
+        position: relative;
+        background: #ffe9d6;
+        color: var(--black);
+        font-size: 2rem;
+        padding: .5rem 1.5rem;
+        display: inline-block;
+    }
+
+}

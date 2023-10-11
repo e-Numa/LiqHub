@@ -1,0 +1,595 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root{
+    --green:#800000;
+    --black:#2c2c54;
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+*::selection{
+    background:var(--green);
+    color:#fff;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.firstHeader{
+    background: #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.6rem;
+}
+
+.logo{
+    color: var(--black);
+    font-size: 3.2rem;
+    font-weight: bolder;
+}
+.logo i{
+    padding-right: .5rem;
+    color: var(--green);
+}
+
+.firstHeader .searchBoxCon{
+    display: flex;
+    height: 5rem;
+}
+
+#searchBox{
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+    font-size: 2rem;
+    color: #333;
+    border: .1rem solid rgba(0,0,0,.3);
+    text-transform: none;
+}
+
+.fa-search{
+    height: 100%;
+    width: 8rem;
+    font-size: 2.5rem;
+    line-height: 4.5rem;
+    color: #fff;
+    background: var(--green);
+    text-align: center;
+    cursor: pointer;
+}
+
+.secondHeader{
+    background: #fff;
+    padding: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%);
+    position: relative
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.fa-bars{
+    font-size: 2.5rem;
+    border: 0.1rem solid black;
+    border-radius: 0.5rem;
+    padding: .64rem 1.2rem;
+}
+
+.fa-window-close{
+    font-size: 4rem;
+    display: none;
+}
+
+.icons{
+    font-size: 2.5rem;
+}
+
+.secondHeader .icons .fas{
+    color: #333;
+}
+
+.secondHeader .icons .fas:hover{
+    color: var(--green);
+}
+
+.navbar{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--black);
+    padding: 1rem 2rem;
+    display: none;
+}
+
+.navbar a{
+    background-color: #ffffff;
+    margin: .5rem;
+    text-align: center;
+}
+
+.shownav{
+    display: flex;
+    flex-direction: column;
+    background: var(--black);
+}
+
+.secondHeader .navbar a {
+    font-size: 2rem;
+    color: var(--black);
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.secondHeader .navbar a:hover {
+    color: rgb(255, 255, 255);
+    background-color: var(--green);
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.homeImg img {
+    width: 100%;
+}
+
+.home .homeImg {
+    flex: 1 1 40rem;
+    padding-top: 5rem;
+}
+
+.home .content {
+    text-align: center;
+}
+
+.home .content {
+    flex: 1 1 40rem;
+}
+
+.home .content h3 {
+    font-size: 4rem;
+    color: var(--black);
+}
+
+.home .content span {
+    font-size: 3rem;
+    color: #666;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    background: var(--green);
+    color: #fff;
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: var(--black);
+    text-decoration: none;
+    color: #fff;
+}
+
+.bannerCon{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.bannerCon .banner {
+    flex: 1 1 40rem;
+    height: 25rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.bannerCon .banner img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.bannerCon .banner:hover img {
+    transform: scale(1.2) rotate(
+            -5deg
+    );
+}
+
+.bannerCon .banner .content h3 {
+    font-size: 3rem;
+    color: var(--black);
+}
+
+.bannerCon .banner .content p {
+    font-size: 2rem;
+    color: #333;
+}
+
+.bannerCon .banner .content {
+    position: absolute;
+    top: 50%;
+    left: 4%;
+    transform: translateY(-50%);
+}
+
+.category .boxCon {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+}
+
+.category .boxCon .box {
+    border: .1rem solid rgba(0,0,0,.3);
+    border-radius: .5rem;
+    text-align: center;
+    padding: 2rem;
+    flex: 1 1 25rem;
+}
+
+.heading {
+    text-align: center;
+    color: var(--black);
+    text-transform: uppercase;
+    padding: 1rem;
+    font-size: 3.5rem;
+    padding-bottom: 2rem;
+}
+
+.heading span {
+    color: var(--green);
+    text-transform: uppercase;
+}
+
+.category .boxCon .box h3 {
+    font-size: 3.5rem;
+    color: var(--black);
+}
+
+.category .boxCon .box p {
+    font-size: 2rem;
+    color: #666;
+    padding: .5rem 0;
+}
+
+.category .boxCon .box img {
+    width: 20rem;
+    height: 20rem;
+    margin: .5rem 0;
+}
+
+.category .boxCon .box .btn {
+    display: block;
+}
+
+.product .boxCon {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.product .boxCon .box {
+    flex: 1 1 40rem;
+    text-align: center;
+    padding: 2rem;
+    border: .1rem solid rgba(0,0,0,.3);
+    border-radius: .5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.product .boxCon .box .discount {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: rgba(0,255,0,.1);
+    color: var(--green);
+    padding: .7rem 1rem;
+    font-size: 2rem;
+}
+
+.product .boxCon .box .icons a {
+    display: block;
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    font-size: 1.7rem;
+    color: var(--black);
+    background: rgba(0,0,0,.05);
+    border-radius: 50%;
+    margin-top: .7rem;
+}
+
+.product .boxCon .box .icons a:hover {
+    background-color: var(--green);
+    color: #fff;
+}
+
+.product .boxCon .box .icons {
+    position: absolute;
+    top: .5rem;
+    right: -6rem;
+}
+
+.product .boxCon .box:hover .icons{
+    right: 1rem;
+}
+
+.product .boxCon .box img {
+    height: 20rem;
+}
+
+.product .boxCon .box h3 {
+    color: var(--black);
+    font-size: 2.5rem;
+}
+
+.product .boxCon .box .stars i {
+    padding: 1rem .1rem;
+    font-size: 1.7rem;
+    color: gold;
+}
+
+.product .boxCon .box .price {
+    font-size: 2rem;
+    color: #333;
+    padding: .5rem 0;
+}
+
+.product .boxCon .box .price span {
+    font-size: 1.5rem;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.product .boxCon .box .quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: .5rem;
+}
+
+.product .boxCon .box .quantity span {
+    padding: 0 .7rem;
+    font-size: 1.7rem;
+}
+
+.product .boxCon .box .quantity input {
+    border: .1rem solid rgba(0,0,0,.3);
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: var(--black);
+    padding: .5rem;
+    background: rgba(0,0,0,.05);
+}
+
+.product .boxCon .box .btn {
+    display: block;
+}
+
+.deal {
+    background: url(images/dealImg.png) no-repeat center;
+    background-size: cover;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+.deal .content .title {
+    font-size: 4rem;
+    color: var(--black);
+}
+
+.deal .content p {
+    font-size: 1.7rem;
+    color: rgb(51, 51, 51);
+    padding: 1rem 0px;
+    width: 60%;
+}
+
+.deal .content .count-down {
+    display: flex;
+    gap: 1rem;
+    padding: .5rem 0;
+}
+
+.deal .content .count-down .box {
+    width: 9rem;
+    text-align: center;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%);
+    border: .1rem solid rgba(0,0,0,.3);
+}
+
+.deal .content .count-down .box h3 {
+    color: var(--black);
+    background: #fff;
+    height: 7rem;
+    line-height: 7rem;
+    width: 100%;
+    font-size: 4rem;
+}
+
+.deal .content .count-down .box span {
+    display: block;
+    background: var(--black);
+    color: #fff;
+    width: 100%;
+    padding: .5rem;
+    font-size: 2rem;
+}
+
+.contact form .inputBox {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .inputBox input, .contact form textarea {
+    padding: 1rem;
+    font-size: 1.7rem;
+    background: #f7f7f7;
+    text-transform: none;
+    margin: 1rem 0;
+    border: .1rem solid rgba(0,0,0,.3);
+    width: 100%;
+}
+
+.contact form textarea {
+    height: 20rem;
+    resize: none;
+    width: 100%;
+}
+
+.newsletter h3 {
+    text-align: center;
+    font-size: 1.76rem;
+    color: var(--black);
+}
+
+.newsletter form {
+    max-width: 55rem;
+    display: flex;
+    align-items: center;
+    margin: 1rem auto;
+    padding: 1.5rem;
+    background: rgba(0,0,0,.1);
+}
+
+.newsletter form .box {
+    width: 100%;
+    padding: .7rem 1.5rem;
+    font-size: 1.7rem;
+    color: #333;
+    text-transform: none;
+}
+
+.newsletter form .btn {
+    margin-top: 0;
+}
+
+.footer .boxCon {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.footer .boxCon .box {
+    padding: 1rem 0;
+    flex: 1 1 25rem;
+}
+
+.footer .boxCon .box p {
+    font-size: 1.3rem;
+    color: #666;
+    padding: .7rem 0;
+}
+
+.footer .boxCon .box .share a {
+    padding: 0;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    text-align: center;
+}
+
+.footer .boxCon .box h3 {
+    font-size: 2.5rem;
+    color: var(--black);
+}
+
+.footer .boxCon .box .links {
+    padding: 1rem 0;
+}
+
+.footer .boxCon .box .links a {
+    display: block;
+    padding: .5rem 0;
+    font-size: 1.7rem;
+    color: #333;
+}
+
+.footer .boxCon .box .links a:hover {
+    text-decoration: underline;
+    color: var(--green);
+}
+
+.footer .credit {
+    padding: 2.5rem 1rem;
+    border-top: .1rem solid rgba(0,0,0,.1);
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.footer .credit span {
+    color: var(--green);
+}
+
+section{
+    padding: 2rem;
+}
+
+.show{
+    display: block;
+}
+
+.hide{
+    display: none;
+}
+
+@media (min-width: 768px) {
+
+    .firstHeader{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .fa-bars{
+        display: none;
+    }
+
+    .navbar{
+        position: relative;
+        background: #fff;
+        color:var(--black);
+        font-size: 2rem;
+        padding: .5rem 1.5rem;
+        display: inline-block;
+    }
+
+    .contact form .inputBox input{
+        width: 49%;
+    }
+
+    .contact form textarea {
+        width: 100%;
+    }
+
+
+}

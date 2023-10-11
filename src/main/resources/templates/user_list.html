@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Users List</title>
+    <link rel="stylesheet" href="/css/deleteProduct.css">
+    <link rel="stylesheet" href="/css/adminDashboard.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <h1>Admin Panel</h1>
+  <ul>
+    <li><a href="/dashboard">Dashboard</a></li>
+    <li><a href="/showUsers">View Users</a></li>
+    <li><a href="/products">View Products</a></li>
+    <li><a href="/add">Add Products</a></li>
+    <li><a href="/deleteProducts">Delete Products</a></li>
+  </ul>
+</div>
+<div class="content">
+  <header>
+    <h2> <u>LiqHub</u></h2>
+    <h2 class="userList">User List</h2>
+    <button id="logoutButton">Logout</button>
+  </header>
+  <main>
+
+    <table>
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+      </tr>
+      </thead>
+      <tbody>
+
+      <tr th:each="userList : ${userRequest}">
+        <td th:text="${userList.id}"></td>
+        <td th:text="${userList.name}"></td>
+        <td th:text="${userList.email}"></td>
+      </tr>
+      </tbody>
+    </table>
+
+  </main>
+</div>
+<script src="/js/admin.js"></script>
+
+
+</body>
+</html>

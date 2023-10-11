@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/css/deleteProduct.css">
+
+</head>
+<body>
+
+<h1><u>LiqHub</u></h1>
+
+<h1>Product List</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Category ID</th>
+        <th>Quantity</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr th:each="product : ${productsRequest}">
+        <td th:text="${product.product_id}"></td>
+        <td th:text="${product.name}"></td>
+        <td th:text="${product.description}"></td>
+        <td th:text="${product.price}"></td>
+        <td th:text="${product.category_id}"></td>
+        <td th:text="${product.quantity}"></td>
+    </tr>
+    </tbody>
+</table>
+
+
+
+</body>
+</html>

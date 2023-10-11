@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="/css/addProduct.css">
+  <link rel="stylesheet" href="/css/adminDashboard.css">
+
+
+
+</head>
+<body>
+
+<div class="sidebar">
+  <h1>Admin Panel</h1>
+  <ul>
+    <li><a href="/dashboard">Dashboard</a></li>
+    <li><a href="/showUsers">Users</a></li>
+    <li><a href="/products">View Products</a></li>
+    <li><a href="/add">Add Products</a></li>
+    <li><a href="/deleteProducts">Delete Products</a></li>
+  </ul>
+</div>
+<div class="content">
+  <header>
+    <h2><u>LiqHub</u></h2>
+    <button id="logoutButton">Logout</button>
+  </header>
+  <main>
+    <div class="centered-content">
+      <div class="floating-content">
+
+
+
+        <h1>Add Product</h1>
+
+        <form action="/add" method="post">
+          <label for="name">Product Name:</label>
+          <input type="text" id="name" name="name" required><br><br>
+
+          <label for="description">Description:</label>
+          <input type="text" id="description" name="description" required><br><br>
+
+          <label for="price">Price:</label>
+          <input type="number" id="price" name="price" required><br><br>
+
+          <label for="category_id">Category ID:</label>
+          <input type="number" id="category_id" name="category_id" required><br><br>
+
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" required><br><br>
+
+          <input type="submit" value="Add Product">
+        </form>
+
+
+      </div>
+    </div>
+
+  </main>
+</div>
+<script src="/js/admin.js"></script>
+
+
+</body>
+</html>

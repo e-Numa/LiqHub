@@ -1,0 +1,98 @@
+/* Reset some default styles */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.adminBack{
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    max-width: 50%;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #2c2c54;
+    color: #fff;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+}
+
+.sidebar h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #800000FF;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.sidebar a:hover {
+    color: #800000FF;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    margin-left: 250px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header h2 {
+    font-size: 30px;
+    color: #2c2c54;
+}
+
+h3 {
+    color:#2c2c54;
+}
+
+#logoutButton {
+    background-color: #800000FF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#logoutButton:hover {
+    background-color: rgb(128, 0, 0);
+}
+
+.userList{
+    margin-top: 40px;
+
+}

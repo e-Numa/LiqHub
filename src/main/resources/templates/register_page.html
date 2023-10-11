@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/css/product.css">
+
+</head>
+<body>
+
+
+
+<div class="form signup">
+    <header>Signup</header>
+    <form method="post" action="/register" th:object="${registerRequest}">
+    <input type="text" name="name" placeholder="Name" required />
+    <input type="text" name="email" placeholder="Email" required />
+<!--        <input type="email" name="email" placeholder="Email" required />-->
+        <input type="password" name="password" placeholder="Password" required />
+        <div class="checkbox">
+            <input type="checkbox" id="signupCheck" required />
+            <label for="signupCheck">I accept all terms & conditions</label>
+        </div>
+        <input type="submit" name="Sign-in" value="Register"/>
+
+        <a href="/">Home Page</a>
+        <a href="/login">Login Page</a>
+
+<!--        <button onclick="location.href='<%= request.getContextPath() %>/adminSignUP.jsp'">Admin Sign Up</button>-->
+<!--        <button onclick="location.href='<%= request.getContextPath() %>/login.jsp'" id="clogin">Customer Login </button>-->
+
+
+    </form>
+</div>
+
+
+
+
+
+</body>
+</html>

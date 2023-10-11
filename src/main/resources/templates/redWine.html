@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/css/redWine.css">
+    <link rel="stylesheet" href="/css/cart_item.css"> <!-- Include cart_item.css here -->
+    <title>Red Wine</title>
+</head>
+<body>
+<header>
+    <div class="secondHeader">
+        <div>
+            <h1 class="new">
+                <a href="/">liqHub</a>
+            </h1>
+        </div>
+        <div>
+            <h2 id="shopBasket"><button id="cart-btn" class="fas fa-shopping-cart" onclick="openCartDialog()"><span
+                    id="cart-counter">0</span></button></h2>
+        </div>
+    </div>
+</header>
+
+<section class="product" id="product">
+    <h1 class="heading">our <span>red wine collection</span></h1>
+    <div class="boxContain">
+        <div class="box">
+            <div class="image-container">
+                <img src="images/redCategory/allesverloren.webp" alt="">
+                <div class="overlay">
+                    <p>price</p>
+                    <h1>&#8358 8999.00</h1>
+                </div>
+            </div>
+            <h3>allesverloren</h3>
+            <button class="add-to-cart-btn" data-index="0">Add to Cart</button>
+        </div>
+
+        <div class="box">
+            <div class="image-container">
+                <img src="images/redCategory/eisberg.jpeg" alt="">
+                <div class="overlay">
+                    <p>price</p>
+                    <h1>&#8358 6770.00</h1>
+                </div>
+            </div>
+            <h3>eisberg</h3>
+            <button class="add-to-cart-btn" data-index="1">Add to Cart</button>
+        </div>
+
+        <div class="box">
+            <div class="image-container">
+                <img src="images/redCategory/rust.webp" alt="">
+                <div class="overlay">
+                    <p>price</p>
+                    <h1>&#8358 17500.00</h1>
+                </div>
+            </div>
+            <h3>rust en vrede</h3>
+            <button class="add-to-cart-btn" data-index="2">Add to Cart</button>
+        </div>
+
+        <div class="box">
+            <div class="image-container">
+                <img src="images/redCategory/Kadet.jpeg" alt="">
+                <div class="overlay">
+                    <p>price</p>
+                    <h1>&#8358 8999.00</h1>
+                </div>
+            </div>
+            <h3>kanonkop kadet</h3>
+            <button class="add-to-cart-btn" data-index="3">Add to Cart</button>
+        </div>
+
+        <div class="box">
+            <div class="image-container">
+                <img src="images/redCategory/parrot.jpeg" alt="">
+                <div class="overlay">
+                    <p>price</p>
+                    <h1>&#8358 7500.00</h1>
+                </div>
+            </div>
+            <h3>lamothe parrot</h3>
+            <button class="add-to-cart-btn" data-index="4">Add to Cart</button>
+        </div>
+
+        <div class="box">
+            <div class="image-container">
+                <img src="images/redCategory/rupert.jpeg" alt="">
+                <div class="overlay">
+                    <p>price</p>
+                    <h1>&#8358 11000.00</h1>
+                </div>
+            </div>
+            <h3>rupert & rothchild</h3>
+            <button class="add-to-cart-btn" data-index="5">Add to Cart</button>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Cart Dialog -->
+<div id="cartModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeCartDialog()">&times;</span>
+        <h2>Cart</h2>
+        <div id="cart-items">
+            <p>Your cart is empty.</p>
+        </div>
+
+        <!-- User Information Form -->
+        <form id="user-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" required>
+            </div>
+            <p class="total-amount">Total Amount to be Paid</p>
+            <span id="total-amount">$0</span>
+        </form>
+
+        <!-- Buttons -->
+        <button onclick="closeCartDialog()" class="btn2">Continue Shopping</button>
+        <button onclick="checkout()" class="btn2">Checkout</button>
+    </div>
+</div>
+
+<section class="footer">
+    <div>
+        <p class="credit">powered by | <span class="idea"> ideaEngines </span> </p>
+    </div>
+</section>
+
+<script src="js/redWine.js"></script>
+</body>
+</html>
+
+
+<!--<script src="js/redWine.js"></script>-->
+<!--</body>-->
